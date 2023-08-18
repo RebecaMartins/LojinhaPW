@@ -80,5 +80,11 @@
     </div> <!-- aqui fecha a div das imgs -->
  </div> <!-- div final -->
 
+<?php
+include 'rodape.html';
+?>
+
+<!-- aqui eh a menção do arquivo do rodapé chamando ele pra executar-->
+
 </body>
 </html>
