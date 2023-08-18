@@ -26,13 +26,14 @@
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
+          <input type="text" class="form-control" placeholder="Search"></div>
+
         <button type="submit" class="btn btn-default">Pesquisar</button>
       </form>
+
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Contato</a></li>
-        <li><a href="#"><font-size="3" face="verdana"><span class="glyphicon glypicon-log-in">ENTRAR</font-size></a></li>
+        <li><a href="#"><font-size="3" face="verdana"><span class="glyphicon glypicon-log-in">ENTRAR</font></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
