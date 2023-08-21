@@ -6,7 +6,7 @@ use dbLojinha;
 
 create table tblCategoria(
 albumCategoria int primary key auto_increment,
-grupoCategoria char (2) not null  /* grupos de kpop são dividos em feminino ou masculino,
+grupoCategoria varchar (50) not null  /* grupos de kpop são dividos em feminino ou masculino,
 então me baseei nisso pro char(2)*/
 )
 default charset utf8;
@@ -33,14 +33,14 @@ create table tblAlbum(
 nomeAlbum varchar (100) primary key auto_incriment,
 codAlbum int not null,
 AlbumCategoria int not null,
-grupoAlbum int not null,
+grupoCategoria varchar(50) not null,
 valorAlbum decimal (6,2) not null,
 qtdEstoque int not null,
 descricaoAlbum text not null,
 lancamentoAlbum enum ('S','N') not null,
 
-constraint fk_AlbumCategoria foreign key(AlbumCategoria) references tblCategoria(albumCategoria),
-constraint fk_grupoAlbum foreign key(grupoAlbum) references tblCategoria(grupoCategoria)
+constraint fk_AlbumCategoria foreign key(AlbumCategoria) references tblCategoria(AlbumCategoria),
+constraint fk_grupoAlbum foreign key(grupoCategoria) references tblCategoria(grupoCategoria)
 );
 -- selects do video 13
 select * from tblCategoria; -- executaria a tabela categoria
