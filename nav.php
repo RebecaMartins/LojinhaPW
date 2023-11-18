@@ -37,17 +37,16 @@
         <?php if(empty($_SESSION['ID'])) {?>
         <li><a href="formlogon.php"><span class="glyphicon glypicon-log-in">ENTRAR</a></li>
       <?php } else {
-
-        if ($_session['Status']==0){
+        if($_SESSION['Status'] == 0) // se essa sessao valer 0 ela mostra o nome do usuario
        $consulta_usuario = $cn->query("select nm_usuario form tbl_usuario where cd_usuario = '$_SESSION[ID]'");
-       $exibe_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
+       $exibe_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC); 
       ?>
       <li><a href="#"><span class="glyphicon glypicon-user"><?php echo $exibe_usuario['nm_usuario'];?></a></li>
       <li><a href="sair.php"><span class="glyphicon glypicon-log-out">Sair</a></li>
-      <?php } else { ?> 
+          <?php } else {?> <!-- senao a sessao id so vai poder valer 1, ai ela cria um botao-->
         <li><a href="adm.php"><button class="btn btn-sm btn-danger">Administrador</button></a></li>
-        <li><a href="sair.php"><span class="glyphicon glypicon-log-out">Sair</a></li>
-      <?php } }?>
+        <li><a href="sair.php"><span class="glyphicon glyphicon-log-out">Sair</a></li>
+      <?php } ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
