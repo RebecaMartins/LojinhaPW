@@ -21,5 +21,5 @@ if ($consulta->rowCount()==1){ //verifica se o usuario esta cadastrado ou nao
 else {
     $_session['ID'] = $exibeusuario['cd_usuario'];
     $_session['Status']=1;
-    header('location:erro.php');
+    header('location:index.php');
 }}
